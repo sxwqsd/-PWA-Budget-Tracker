@@ -46,7 +46,7 @@ self.addEventListener('fetch', function (e) {
     e.respondWith(
         caches.match(e.request).then(function (request) {
             if (request) { // if cache is available, respond with cache
-                console.log('respomging with da cache moneys baby: ' + e.request.url);
+                console.log('responding with da cache moneys baby: ' + e.request.url);
                 return request
             } else {       // if there are no cache, try fetching request
                 console.log('it aint cache we fetching it again : ' + e.request.url);
